@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatbot.cpp
+/root/Desktop/Memory-management-chat-bot/src/chatbot.cpp
 iostream
 -
 random
@@ -16,93 +16,47 @@ algorithm
 ctime
 -
 chatlogic.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatlogic.h
+/root/Desktop/Memory-management-chat-bot/src/chatlogic.h
 graphnode.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphnode.h
+/root/Desktop/Memory-management-chat-bot/src/graphnode.h
 graphedge.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphedge.h
+/root/Desktop/Memory-management-chat-bot/src/graphedge.h
 chatbot.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatbot.h
+/root/Desktop/Memory-management-chat-bot/src/chatbot.h
 
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatbot.h
+/root/Desktop/Memory-management-chat-bot/src/chatbot.h
 wx/bitmap.h
 -
 string
 -
 
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatgui.cpp
-wx/filename.h
--
-wx/colour.h
--
-wx/image.h
--
-string
--
-chatbot.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatbot.h
-chatlogic.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatlogic.h
-chatgui.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatgui.h
-
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatgui.h
+/root/Desktop/Memory-management-chat-bot/src/chatgui.h
 wx/wx.h
 -
 memory
 -
 
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatlogic.cpp
-fstream
--
-sstream
--
-iostream
--
-vector
--
-iterator
--
-tuple
--
-algorithm
--
-graphedge.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphedge.h
-graphnode.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphnode.h
-chatbot.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatbot.h
-chatlogic.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatlogic.h
-
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatlogic.h
+/root/Desktop/Memory-management-chat-bot/src/chatlogic.h
 vector
 -
 string
 -
 chatgui.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatgui.h
+/root/Desktop/Memory-management-chat-bot/src/chatgui.h
 
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphedge.h
+/root/Desktop/Memory-management-chat-bot/src/graphedge.h
 vector
 -
 string
 -
 
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphnode.cpp
-graphedge.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphedge.h
-graphnode.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphnode.h
-
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/graphnode.h
+/root/Desktop/Memory-management-chat-bot/src/graphnode.h
 vector
 -
 string
 -
 chatbot.h
-/root/Desktop/CppND-Memory-Management-Chatbot (1)/src/chatbot.h
+/root/Desktop/Memory-management-chat-bot/src/chatbot.h
 
 /usr/include/wx-3.0/wx/accel.h
 wx/defs.h

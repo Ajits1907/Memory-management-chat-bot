@@ -1,4 +1,4 @@
-# Install script for directory: /root/Desktop/CppND-Memory-Management-Chatbot (1)
+# Install script for directory: /root/Desktop/Memory-management-chat-bot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/root/Desktop/CppND-Memory-Management-Chatbot (1)/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/root/Desktop/Memory-management-chat-bot/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

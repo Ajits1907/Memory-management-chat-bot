@@ -43,8 +43,81 @@ ChatBot::~ChatBot()
 }
 
 //// STUDENT CODE
-////
+////  remaining 4 rules out of 5
+ChatBot::ChatBot(const ChatBot &source) //Task 2 - Copy constructor
+{
+      std::cout << "ChatBot copy constructor.\n";
 
+  if (source._image == NULL)  // If source image is null
+  {
+    _image = NULL;
+  } 
+  else {
+    _image = new wxBitmap(*(source._image));  //  load onto heap
+  }
+
+  _currentNode = source._currentNode;
+  _rootNode = source._rootNode;
+  _chatLogic = source._chatLogic;
+}
+
+ChatBot &ChatBot::operator=(const ChatBot &source) //Task 2 - Copy assignment
+{
+      std::cout << "ChatBot copy assignment operator.\n";
+
+  if (this == &source) 
+  return *this;
+
+  if (_image != NULL) 
+  delete _image;  // free current image resource
+
+  _image = new wxBitmap(*source._image);
+
+  _currentNode = source._currentNode;
+  _rootNode = source._rootNode;
+  _chatLogic = source._chatLogic;
+  return *this;
+}
+
+ChatBot::ChatBot(ChatBot &&source) //Task 2 - Move constructor
+{
+  std::cout << "ChatBot move constructor.\n";
+
+  _image = source._image;
+  _currentNode = source._currentNode;
+  _rootNode = source._rootNode;
+  _chatLogic = source._chatLogic;
+
+  // Remove the source pointers
+  source._image = nullptr;
+  source._currentNode = nullptr;
+  source._rootNode = nullptr;
+  source._chatLogic = nullptr;
+}
+
+ChatBot &ChatBot::operator=(ChatBot &&source) //Task 2 - Move assignment
+{
+      std::cout << "ChatBot move assignment operator.\n";
+
+   if (this == &source) 
+  return *this;
+
+  if (_image != NULL) 
+  delete _image;  // free current image resource     
+
+  _image = source._image;
+  _currentNode = source._currentNode;
+  _rootNode = source._rootNode;
+  _chatLogic = source._chatLogic;
+
+  // Remove the source pointers
+  source._image = nullptr;
+  source._currentNode = nullptr;
+  source._rootNode = nullptr;
+  source._chatLogic = nullptr;
+
+  return *this;
+}
 ////
 //// EOF STUDENT CODE
 
