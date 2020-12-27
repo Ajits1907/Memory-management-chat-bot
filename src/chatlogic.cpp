@@ -40,6 +40,7 @@ ChatLogic::~ChatLogic()
     //     delete *it;
     // }
 
+    //Task 4 exclusie ownership of child edges
     // delete all edges
     // for (auto it = std::begin(_edges); it != std::end(_edges); ++it)
     // {

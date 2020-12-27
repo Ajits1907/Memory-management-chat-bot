@@ -29,11 +29,11 @@ public:
 
     //// STUDENT CODE
     ////
-ChatBot(const ChatBot &source); //Task 2 - Copy constructor
-ChatBot &operator=(const ChatBot &source); //Task 2 - Copy assignment
+    ChatBot(const ChatBot &source);            //Task 2 - Copy constructor
+    ChatBot &operator=(const ChatBot &source); //Task 2 - Copy assignment
 
-ChatBot(ChatBot &&source); //Task 2 - Move constructor
-ChatBot &operator=(ChatBot &&source); //Task 2 - Move assignment
+    ChatBot(ChatBot &&source);            //Task 2 - Move constructor
+    ChatBot &operator=(ChatBot &&source); //Task 2 - Move assignment
 
     ////
     //// EOF STUDENT CODE
@@ -42,7 +42,12 @@ ChatBot &operator=(ChatBot &&source); //Task 2 - Move assignment
     void SetCurrentNode(GraphNode *node);
     void SetRootNode(GraphNode *rootNode) { _rootNode = rootNode; }
     void SetChatLogicHandle(ChatLogic *chatLogic) { _chatLogic = chatLogic; }
+
+    void SetImageHandle(wxBitmap *imageHandle) { _image = imageHandle; }
+    ChatLogic *GetChatLogicHandle() { return _chatLogic; }
     wxBitmap *GetImageHandle() { return _image; }
+    GraphNode *GetRootNode() { return _rootNode; }
+    
 
     // communication
     void ReceiveMessageFromUser(std::string message);

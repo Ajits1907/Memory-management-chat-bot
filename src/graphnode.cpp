@@ -27,23 +27,37 @@ void GraphNode::AddEdgeToParentNode(GraphEdge *edge)
     _parentEdges.push_back(edge);
 }
 
-void GraphNode::AddEdgeToChildNode(GraphEdge *edge)
+//Task 4 exclusive ownership of child edges
+// void GraphNode::AddEdgeToChildNode(GraphEdge *edge)
+void GraphNode::AddEdgeToChildNode(std::unique_ptr<GraphEdge> &&edge)
 {
-    _childEdges.push_back(edge);
+    // _childEdges.push_back(edge);
+    _childEdges.push_back(std::move(edge));
 }
 
 //// STUDENT CODE
 ////
-void GraphNode::MoveChatbotHere(ChatBot *chatbot)
+// void GraphNode::MoveChatbotHere(ChatBot *chatbot)
+void GraphNode::MoveChatbotHere(ChatBot &&chatbot)
 {
-    _chatBot = chatbot;
-    _chatBot->SetCurrentNode(this);
+    _chatBot = ChatBot(std::move(chatbot));
+    _chatBot.GetChatLogicHandle()->SetChatbotHandle(&_chatBot);
+
+    _chatBot.SetCurrentNode(this);
+    // _chatBot = chatbot;
+    // _chatBot->SetCurrentNode(this);
 }
 
 void GraphNode::MoveChatbotToNewNode(GraphNode *newNode)
 {
-    newNode->MoveChatbotHere(_chatBot);
-    _chatBot = nullptr; // invalidate pointer at source
+    ChatBot tmpbot = ChatBot();
+    tmpbot.SetRootNode(_chatBot.GetRootNode()); // Set the root node
+    tmpbot.SetChatLogicHandle(_chatBot.GetChatLogicHandle());
+    tmpbot.SetImageHandle(_chatBot.GetImageHandle());
+    newNode->MoveChatbotHere(std::move(tmpbot));
+    // newNode->MoveChatbotHere(_chatBot);
+    // _chatBot = nullptr; // invalidate pointer at source
+    _chatBot.SetImageHandle(nullptr); // invalidate pointer at source
 }
 ////
 //// EOF STUDENT CODE
@@ -53,7 +67,8 @@ GraphEdge *GraphNode::GetChildEdgeAtIndex(int index)
     //// STUDENT CODE
     ////
 
-    return _childEdges[index];
+    // return _childEdges[index];
+    return _childEdges[index].get();
 
     ////
     //// EOF STUDENT CODE

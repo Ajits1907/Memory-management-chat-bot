@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/root/Desktop/Memory-management-chat-bot/src/chatbot.cpp
+iostream
+-
+random
+-
+algorithm
+-
+ctime
+-
+chatlogic.h
+/root/Desktop/Memory-management-chat-bot/src/chatlogic.h
+graphnode.h
+/root/Desktop/Memory-management-chat-bot/src/graphnode.h
+graphedge.h
+/root/Desktop/Memory-management-chat-bot/src/graphedge.h
+chatbot.h
+/root/Desktop/Memory-management-chat-bot/src/chatbot.h
+
 /root/Desktop/Memory-management-chat-bot/src/chatbot.h
 wx/bitmap.h
 -
@@ -17,30 +35,6 @@ wx/wx.h
 -
 memory
 -
-
-/root/Desktop/Memory-management-chat-bot/src/chatlogic.cpp
-fstream
--
-sstream
--
-iostream
--
-vector
--
-iterator
--
-tuple
--
-algorithm
--
-graphedge.h
-/root/Desktop/Memory-management-chat-bot/src/graphedge.h
-graphnode.h
-/root/Desktop/Memory-management-chat-bot/src/graphnode.h
-chatbot.h
-/root/Desktop/Memory-management-chat-bot/src/chatbot.h
-chatlogic.h
-/root/Desktop/Memory-management-chat-bot/src/chatlogic.h
 
 /root/Desktop/Memory-management-chat-bot/src/chatlogic.h
 memory
@@ -63,8 +57,12 @@ vector
 -
 string
 -
+memory
+-
 chatbot.h
 /root/Desktop/Memory-management-chat-bot/src/chatbot.h
+chatlogic.h
+/root/Desktop/Memory-management-chat-bot/src/chatlogic.h
 
 /usr/include/wx-3.0/wx/accel.h
 wx/defs.h
